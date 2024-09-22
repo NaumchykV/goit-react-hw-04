@@ -1,0 +1,16 @@
+.image_modal {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    }
+
+ .img {
+    display: flex;
+    margin: 0 auto;
+    padding: 50px;
+    max-width: 80%;
+    max-height: 80%;
+  }
+  

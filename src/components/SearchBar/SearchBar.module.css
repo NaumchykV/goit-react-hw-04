@@ -1,0 +1,19 @@
+.form {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+padding-top: 10px;
+padding-bottom: 10px;
+margin: 0 auto;
+/* background-color: blueviolet; */
+}
+
+.form_item {
+    display: flex;
+    gap: 12px;
+}
+
+.button {
+    border: 1px solid #000;
+    border-radius: 4px;
+}
