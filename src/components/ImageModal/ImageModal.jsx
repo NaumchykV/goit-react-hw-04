@@ -2,8 +2,15 @@ import Modal from 'react-modal';
 import css from './ImageModal.module.css';
 
 const ImageModal = ({ isOpen, onRequestClose, image }) => {
+  const handleOverlayClick = (event) => {
+    if (event.target === event.currentTarget) {
+      onRequestClose();
+    }
+  };
+
   return (
-    <Modal className={css.image_modal}
+    <Modal
+      className={css.image_modal}
       isOpen={isOpen}
       onRequestClose={onRequestClose}
       style={{
@@ -19,12 +26,11 @@ const ImageModal = ({ isOpen, onRequestClose, image }) => {
           transform: 'translate(-50%, -50%)'
         }
       }}
+      onClick={handleOverlayClick}
     >
-      <div className={css.image_modal} onClick={onRequestClose}></div>
       <img className={css.img} src={image.urls.regular} alt={image.alt_description} />
-     </Modal>
+    </Modal>
   );
 };
-
 
 export default ImageModal;
